@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>音乐播放</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href="../css/player.css" rel="stylesheet" type="text/css"/>
+    <script src="../script/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="../script/player.js" type="text/javascript"></script>
+</head>
+<body>
+<form id="form1" runat="server">
+    <div class="DivBG">
+        <div class="DivTop">
+            <span id="icon">
+                <!--<a></a>
+                <img src="image/tail_yellow.png" />-->
+            </span>
+            <input id="protect" type="button"/>
+            <div>
+                <span id="previousMonth"><</span> <span id="month">4月</span> <span id="year">2016年</span>
+                <span id="nextMonth">></span>
+            </div>
+            <img id="today" src="../image/today.png"/>
+        </div>
+        <div class="DivWeek">
+            <ul>
+                <li>日</li>
+                <li>一</li>
+                <li>二</li>
+                <li>三</li>
+                <li>四</li>
+                <li>五</li>
+                <li>六</li>
+            </ul>
+        </div>
+        <div class="DivCalender" id="calender">
+            <ul>
+                <li>
+                    <div id="1" name="divName_1">1</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="2" name="divName_2">2</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="3" name="divName_3">3</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="4" name="divName_4">4</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="5" name="divName_5">5</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="6" name="divName_6">6</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="7" name="divName_7">7</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="8" name="divName_8">8</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="9" name="divName_9">9</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="10" name="divName_10">10</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="11" name="divName_11">11</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="12" name="divName_12">12</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="13" name="divName_13" class="DivMark">13</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="14" name="divName_14" class="DivMark">14</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="15" name="divName_15">15</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="16" name="divName_16">16</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="17" name="divName_17">17</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="18" name="divName_18">18</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="19" name="divName_19">19</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="20" name="divName_20">20</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="21" name="divName_21">21</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="22" name="divName_22">22</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="23" name="divName_23">23</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="24" name="divName_24">24</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="25" name="divName_25">25</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="26" name="divName_26">26</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="27" name="divName_27">27</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="28" name="divName_28">28</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="29" name="divName_29">29</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="30" name="divName_30">30</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="31" name="divName_31">31</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="32" name="divName_32">32</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="33" name="divName_33">33</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="34" name="divName_34">34</div>
+                    <img src="" alt=""></li>
+                <li>
+                    <div id="35" name="divName_35">35</div>
+                    <img src="" alt=""></li>
+            </ul>
+        </div>
+        <div class="DivExtra">
+        </div>
+        <div class="DivPlayer" id="player">
+            <div class="DivControlUp">
+                <span id="currentTime">
+                    <!--0:00--></span>
+                <div>
+                    <div class="DivProgressFull" id="progressFull">
+                        <span class="SpanProgressNow" id="progressNow"></span>
+                    </div>
+                </div>
+                <span id="duration">
+                    <!--4:00--></span>
+            </div>
+            <div class="DivControlDown">
+                <div class="DivLeft">
+                    <input type="button" id="play"/>
+                    <input type="button" id="replay"/>
+                </div>
+                <div class="DivRight">
+                    <div class="DivRightUp">
+                        <input type="button" id="previous"/>
+                        <input type="button" id="next"/>
+                        <div>
+                            <input id="mute" type="button"/>
+                            <div class="DivVolumeFull" id="volumeFull">
+                                <span class="SpanVolumeNow" id="volumeNow"></span>
+                            </div>
+                            <input id="full" type="button"/>
+                        </div>
+                    </div>
+                    <div class="DivRightDown" id="shine">
+                        <span>当前播放：</span>
+                        <div id="title">
+                            <marquee scrollamount="1"></marquee>
+                            <!--<div>
+                            <span class="Plus">+</span> <span class="Shadow"></span></div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="DivAudio">
+            <audio id='audio'></audio>
+        </div>
+        <div class="DivListHeader">
+            播放列表
+        </div>
+        <ul class="UlList" id="list">
+            <li>
+                <!--<input type="button" />
+                <span>What A Wonderful World</span>-->
+            </li>
+        </ul>
+    </div>
+</form>
+</body>
+</html>
